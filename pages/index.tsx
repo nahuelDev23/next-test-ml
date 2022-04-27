@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import { useEffect } from 'react'
+import Script from 'next/script'
+import { useEffect, useLayoutEffect } from 'react'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -31,14 +32,12 @@ const Home: NextPage = () => {
   //   document.body.appendChild(script);
   // },[])
 
-  useEffect(() => {
-
-    addCheckout()
-
-  }, [])
+  
   return (
     <div className={styles.container}>
-      <button id='button'></button>
+      <button id='button'/>
+
+      <Script src="https://sdk.mercadopago.com/js/v2" onLoad={addCheckout}/>
     </div>
   )
 }
