@@ -11,10 +11,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>
-          {/* <script async src="https://sdk.mercadopago.com/js/v2"></script> */}
-
-        </Head>
+        <Head/>
         <body>
           <Main />
           <NextScript />
